@@ -18,14 +18,14 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nombre', 120);
             $table->string('apellido', 120);
-            $table->tinyInteger('dni');
+            $table->bigInteger('dni');
             $table->string('direccion');
             $table->string('email',120)->nullable();
-            $table->tinyInteger('telefono')->nullable();
+            $table->bigInteger('telefono')->nullable();
             $table->date('fecha_nacimiento');
             $table->date('fecha_ingreso');
             $table->string('cargo', 100);
-            $table->tinyInteger('sueldo');
+            $table->bigInteger('sueldo');
         });
     }
 

@@ -12,12 +12,16 @@
     <div class="container shadow bg-white">
         <div class="row">
             <div class="col-sm-12">
-                <h1>CRUD PHP MySQL</h1>
+                @yield('header')
             </div>
-            <div class="col-sm-12">
-                <a href="{{ route('empresa.create')}}" class="btn btn-link">Crear Empresa</a>
-                <a href="{{ route('sucursal.create')}}" class="btn btn-link">Crear Sucursal</a>
-                <a href="{{ route('empleado.create')}}" class="btn btn-link">Crear Empleado</a>
+            <div class="col-sm-4">
+                @yield('empresa')
+            </div>
+            <div class="col-sm-4">
+                @yield('sucursal')
+            </div>
+            <div class="col-sm-4">
+                @yield('empleado')
             </div>
             <div class="col-sm-12">
                 @yield('content')

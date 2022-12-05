@@ -14,7 +14,8 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        //
+        $empleados = Empleado::orderByDesc('id')->get();
+        return view('empleado.index',compact('empleados'));
     }
 
     /**
@@ -39,15 +40,17 @@ class EmpleadoController extends Controller
             [
                 'nombre' => 'required|max:120',
                 'apellido' => 'required|max:120',
-                'dni' => 'required|numeric|min:9|max:9',
+                'dni' => 'required|numeric',
                 'direccion' => 'required',
                 'email' => 'nullable|max:120',
-                'telefono' => 'nullable|numeric|min:10|max:10',
-                'fecha_nacimiento' => 'date_format:Y-m-d\th:i',
-                'fecha_ingreso' => 'date_format:Y-m-d\th:i',
+                'telefono' => 'nullable|numeric',
+                'fecha_nacimiento' => 'date_format:Y-m-d',
+                'fecha_ingreso' => 'date_format:Y-m-d',
                 'cargo' => 'required|max:100',
-                'sueldo' => 'required|numeric|min:10|max:10',
+                'sueldo' => 'required|numeric',
             ]);
+        $empleado = Empleado::create($data);
+        return redirect()->route('empleado.index');
     }
 
     /**

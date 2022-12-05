@@ -14,7 +14,8 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        //
+        $empresas = Empresa::orderByDesc('id')->get();
+        return view('empresa.index',compact('empresas'));
     }
 
     /**
@@ -38,11 +39,13 @@ class EmpresaController extends Controller
         $data = $request->validate(
             [
                 'nombre' => 'required|max:120',
-                'cuit' => 'required|numeric|min:11|max:11',
+                'cuit' => 'required|numeric',
                 'direccion' => 'required',
                 'email' => 'nullable|max:120',
-                'telefono' => 'nullable|numeric|min:10|max:10',
+                'telefono' => 'nullable|numeric',
             ]);
+        $empresa = Empresa::create($data);
+        return redirect()->route('empresa.index');
     }
 
     /**

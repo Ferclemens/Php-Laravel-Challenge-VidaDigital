@@ -24,6 +24,10 @@ Route::get('empresa/registrar',[EmpresaController::class,'create'])->name('empre
 Route::get('sucursal/registrar',[SucursalController::class,'create'])->name('sucursal.create');
 Route::get('empleado/registrar',[EmpleadoController::class,'create'])->name('empleado.create');
 
+Route::get('empresa/listar',[EmpresaController::class,'index'])->name('empresa.index');
+Route::get('sucursal/listar',[SucursalController::class,'index'])->name('sucursal.index');
+Route::get('empleado/listar',[EmpleadoController::class,'index'])->name('empleado.index');
+
 // ----SETTERS----
 Route::post('empresa/guardar',[EmpresaController::class,'store'])->name('empresa.store');
 Route::post('sucursal/guardar',[SucursalController::class,'store'])->name('sucursal.store');

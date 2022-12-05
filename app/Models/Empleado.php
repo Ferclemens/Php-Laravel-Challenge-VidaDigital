@@ -15,6 +15,7 @@ class Empleado extends Model
         'apellido',
         'dni',
         'direccion',
+        'email',
         'telefono',
         'fecha_nacimiento',
         'fecha_ingreso',

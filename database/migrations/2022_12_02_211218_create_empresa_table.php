@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nombre', 120);
-            $table->tinyInteger('cuit');
+            $table->bigInteger('cuit');
             $table->string('direccion');
             $table->string('email',120)->nullable();
-            $table->tinyInteger('telefono')->nullable();
+            $table->bigInteger('telefono')->nullable();
         });
     }
 

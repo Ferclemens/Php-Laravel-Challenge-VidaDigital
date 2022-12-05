@@ -14,7 +14,8 @@ class SucursalController extends Controller
      */
     public function index()
     {
-        //
+        $sucursales = Sucursal::orderByDesc('id')->get();
+        return view('sucursal.index',compact('sucursales'));
     }
 
     /**
@@ -40,8 +41,10 @@ class SucursalController extends Controller
                 'nombre' => 'required|max:120',
                 'direccion' => 'required',
                 'email' => 'nullable|max:120',
-                'telefono' => 'nullable|numeric|min:10|max:10',
+                'telefono' => 'nullable|numeric',
             ]);
+        $sucursal = Sucursal::create($data);
+        return redirect()->route('sucursal.index');
     }
 
     /**
