@@ -15,5 +15,6 @@ class Empresa extends Model
         'cuit',
         'direccion',
         'correo',
+        'telefono',
     ];
 }

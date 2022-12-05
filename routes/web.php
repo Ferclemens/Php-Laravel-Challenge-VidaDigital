@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\SucursalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('empresa/registrar',[EmpresaController::class,'create'])->name('empresa.create');
+Route::get('sucursal/registrar',[SucursalController::class,'create'])->name('sucursal.create');
+Route::get('empleado/registrar',[EmpleadoController::class,'create'])->name('empleado.create');

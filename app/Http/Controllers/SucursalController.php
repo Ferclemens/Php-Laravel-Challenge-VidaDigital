@@ -24,7 +24,7 @@ class SucursalController extends Controller
      */
     public function create()
     {
-        //
+        return view('sucursal.create');
     }
 
     /**

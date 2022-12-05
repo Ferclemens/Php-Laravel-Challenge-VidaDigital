@@ -20,6 +20,7 @@ return new class extends Migration
             $table->tinyInteger('cuit');
             $table->string('direccion');
             $table->string('correo',120)->nullable();
+            $table->tinyInteger('telefono');
         });
     }
 

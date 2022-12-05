@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nombre', 120)->nullable();
             $table->string('direccion');
             $table->string('correo',120)->nullable();
+            $table->tinyInteger('telefono');
         });
     }
 
