@@ -16,11 +16,12 @@ return new class extends Migration
         Schema::create('empleado', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nombre/s', 120);
-            $table->string('apellido/s', 120);
+            $table->string('nombre', 120);
+            $table->string('apellido', 120);
             $table->tinyInteger('dni');
             $table->string('direccion');
-            $table->tinyInteger('telefono');
+            $table->string('email',120)->nullable();
+            $table->tinyInteger('telefono')->nullable();
             $table->date('fecha_nacimiento');
             $table->date('fecha_ingreso');
             $table->string('cargo', 100);

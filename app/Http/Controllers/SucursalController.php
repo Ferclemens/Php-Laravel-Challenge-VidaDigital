@@ -35,7 +35,13 @@ class SucursalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate(
+            [
+                'nombre' => 'required|max:120',
+                'direccion' => 'required',
+                'email' => 'nullable|max:120',
+                'telefono' => 'nullable|numeric|min:10|max:10',
+            ]);
     }
 
     /**

@@ -6,7 +6,8 @@
     <h3 class="my-3">
         Registrar Empleado
     </h3>
-    <form action="javascript:void(0);">
+    <form action="{{ route('empleado.store') }}" method="POST">
+        @csrf
         <div class="row my-2">
             <div class="col-sm-12">
                 <label for="InputNombre" class="form-label">Nombre</label>
@@ -34,15 +35,32 @@
             </div>
             <div class="col-sm-6">
                 <label for="InputFechaNacimiento" class="form-label">Fecha de nacimiento</label>
-                <input type="datetime-local" name="fechaNacimiento" id="InputFechaNacimiento" class="form-control">
+                <input type="datetime-local" name="fecha_nacimiento" id="InputFechaNacimiento" class="form-control">
             </div>
             <div class="col-sm-6">
                 <label for="InputFechaIngreso" class="form-label">Fecha de ingreso</label>
-                <input type="datetime-local" name="fechaIngreso" id="InputFechaIngreso" class="form-control">
+                <input type="datetime-local" name="fecha_ingreso" id="InputFechaIngreso" class="form-control">
+            </div>
+            <div class="col-sm-6">
+                <label for="InputCargo" class="form-label">Cargo</label>
+                <input type="text" name='cargo' id='InputCargo' class="form-control" placeholder="Ingrese cargo">
+            </div>
+            <div class="col-sm-6">
+                <label for="InputSueldo" class="form-label">Sueldo</label>
+                <input type="number" name='sueldo' id='InputSueldo' class="form-control" placeholder="Ingrese Sueldo">
             </div>
             <div class="col-sm-12 text-center my-2">
                 <button type="submit" class="btn px-5 btn-primary">Guardar</button>
             </div>
         </div>
     </form>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 @endsection

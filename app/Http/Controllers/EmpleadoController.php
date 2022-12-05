@@ -35,7 +35,19 @@ class EmpleadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate(
+            [
+                'nombre' => 'required|max:120',
+                'apellido' => 'required|max:120',
+                'dni' => 'required|numeric|min:9|max:9',
+                'direccion' => 'required',
+                'email' => 'nullable|max:120',
+                'telefono' => 'nullable|numeric|min:10|max:10',
+                'fecha_nacimiento' => 'date_format:Y-m-d\th:i',
+                'fecha_ingreso' => 'date_format:Y-m-d\th:i',
+                'cargo' => 'required|max:100',
+                'sueldo' => 'required|numeric|min:10|max:10',
+            ]);
     }
 
     /**

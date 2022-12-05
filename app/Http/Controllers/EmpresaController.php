@@ -35,7 +35,14 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate(
+            [
+                'nombre' => 'required|max:120',
+                'cuit' => 'required|numeric|min:11|max:11',
+                'direccion' => 'required',
+                'email' => 'nullable|max:120',
+                'telefono' => 'nullable|numeric|min:10|max:10',
+            ]);
     }
 
     /**

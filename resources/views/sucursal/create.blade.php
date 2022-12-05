@@ -6,7 +6,8 @@
     <h3  class="my-3">
         Registrar Sucursal
     </h3>
-    <form action="javascript:void(0);">
+    <form action="{{ route('sucursal.store') }}" method="POST">
+        @csrf
         <div class="row my-4">
             <div class="col-sm-12">
                 <label for="InputNombre" class="form-label">Nombre de la sucursal</label>
@@ -29,4 +30,13 @@
             </div>
         </div>
     </form>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 @endsection

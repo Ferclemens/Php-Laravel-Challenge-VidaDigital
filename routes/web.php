@@ -19,6 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// ----GETTERS----
 Route::get('empresa/registrar',[EmpresaController::class,'create'])->name('empresa.create');
 Route::get('sucursal/registrar',[SucursalController::class,'create'])->name('sucursal.create');
 Route::get('empleado/registrar',[EmpleadoController::class,'create'])->name('empleado.create');
+
+// ----SETTERS----
+Route::post('empresa/guardar',[EmpresaController::class,'store'])->name('empresa.store');
+Route::post('sucursal/guardar',[SucursalController::class,'store'])->name('sucursal.store');
+Route::post('empleado/guardar',[EmpleadoController::class,'store'])->name('empleado.store');
