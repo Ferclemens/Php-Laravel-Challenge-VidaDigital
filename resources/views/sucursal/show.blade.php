@@ -19,5 +19,12 @@
         <div class="col-sm-12">
             Teléfono: {{$sucursal->telefono}}    
         </div>
+        <div class="col-sm-12">
+            <form action="{{ route('sucursal.destroy', $sucursal)}}" method="POST">
+                @csrf
+                @method('delete')
+                <button class="btn btn-danger btn-sm">Eliminar</button>
+            </form>    
+        </div>
     </div>
 @endsection

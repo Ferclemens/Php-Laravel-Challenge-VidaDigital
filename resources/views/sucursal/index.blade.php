@@ -44,6 +44,13 @@
                     <td>
                         <a href="{{route('sucursal.show', $sucursal)}}">Ver</a>
                         <a href="{{route('sucursal.edit', $sucursal)}}">Editar</a>
+                        <div class="col-sm-12">
+                            <form action="{{ route('sucursal.destroy', $sucursal)}}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>    
+                        </div>
                     </td>
                 </tr>
             @endforeach

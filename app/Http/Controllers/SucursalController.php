@@ -92,6 +92,7 @@ class SucursalController extends Controller
      */
     public function destroy(Sucursal $sucursal)
     {
-        //
+        $sucursal->delete();
+        return redirect()->route('sucursal.index');
     }
 }

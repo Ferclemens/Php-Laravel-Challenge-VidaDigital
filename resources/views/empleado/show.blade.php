@@ -37,5 +37,12 @@
         <div class="col-sm-12">
             Sueldo: {{$empleado->sueldo}}    
         </div>
+        <div class="col-sm-12">
+            <form action="{{ route('empleado.destroy', $empleado)}}" method="POST">
+                @csrf
+                @method('delete')
+                <button class="btn btn-danger btn-sm">Eliminar</button>
+            </form>    
+        </div>
     </div>
 @endsection

@@ -80,6 +80,13 @@
                     <td>
                         <a href="{{route('empleado.show', $empleado)}}">Ver</a>
                         <a href="{{route('empleado.edit', $empleado)}}">Editar</a>
+                        <div class="col-sm-12">
+                            <form action="{{ route('empleado.destroy', $empleado)}}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>    
+                        </div>
                     </td>
                 </tr>
             @endforeach

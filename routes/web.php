@@ -45,3 +45,8 @@ Route::get('sucursal/{sucursal}/editar',[SucursalController::class,'edit'])->nam
 Route::put('empleado/{empleado}/actualizar',[EmpleadoController::class,'update'])->name('empleado.update');
 Route::put('empresa/{empresa}/actualizar',[EmpresaController::class,'update'])->name('empresa.update');
 Route::put('sucursal/{sucursal}/actualizar',[SucursalController::class,'update'])->name('sucursal.update');
+
+// ----DELETE----
+Route::delete('empleado/{empleado}/eliminar',[EmpleadoController::class,'destroy'])->name('empleado.destroy');
+Route::delete('empresa/{empresa}/eliminar',[EmpresaController::class,'destroy'])->name('empresa.destroy');
+Route::delete('sucursal/{sucursal}/eliminar',[SucursalController::class,'destroy'])->name('sucursal.destroy');
