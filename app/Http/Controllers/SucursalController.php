@@ -15,8 +15,7 @@ class SucursalController extends Controller
      */
     public function index()
     {
-        $sucursales = Sucursal::orderByDesc('id')->get();
-        return view('sucursal.index',compact('sucursales'));
+        return view('sucursal.index');
     }
 
     /**

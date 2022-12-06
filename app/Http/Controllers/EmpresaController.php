@@ -15,8 +15,7 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        $empresas = Empresa::orderByDesc('id')->get();
-        return view('empresa.index',compact('empresas'));
+        return view('empresa.index');
     }
 
     /**
