@@ -25,7 +25,6 @@
                     Teléfono
                 </th>
                 <th>
-                <th>
                     Opciones
                 </th>
             </tr>
@@ -47,6 +46,9 @@
                     </td>
                     <td>
                         {{ $empresa->telefono}}
+                    </td>
+                    <td>
+                        <a href="{{route('empresa.edit', $empresa)}}">Editar</a>
                     </td>
                 </tr>
             @endforeach

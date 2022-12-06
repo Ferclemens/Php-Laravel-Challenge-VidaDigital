@@ -1,13 +1,14 @@
 @extends('tema.app')
 
-@section('title','Create Sucursal')
+@section('title','Editar Empresa')
 
 @section('content')
-    <h3  class="my-3">
-        Registrar Sucursal
+    <h3 class="my-3">
+        Editar Empresa ID: <i>{{$empresa->id}}</i> - <i>{{$empresa->nombre}}</i>
     </h3>
-    <form action="{{ route('sucursal.store') }}" method="POST">
-        <x-sucursal-form/>
+    <form action="{{ route('empresa.update', $empresa) }}" method="POST">
+        @method('put')
+        <x-empresa-form :empresa="$empresa"/>
     </form>
     @if ($errors->any())
     <div class="alert alert-danger">

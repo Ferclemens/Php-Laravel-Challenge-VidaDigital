@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmpleadoRequest;
 use App\Models\Empleado;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,18 @@ class EmpleadoController extends Controller
     {
         $empleados = Empleado::orderByDesc('id')->get();
         return view('empleado.index',compact('empleados'));
+        
+        /*
+
+        //------Otra forma sustituta de func compact('empleados')
+
+        $empleados = Empleado::orderByDesc('id')->get();
+        $params = [
+            'empleados' => $empleados
+        ]; 
+        return view('empleado.index', $params);
+        
+        */
     }
 
     /**
@@ -34,21 +47,9 @@ class EmpleadoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EmpleadoRequest $request)
     {
-        $data = $request->validate(
-            [
-                'nombre' => 'required|max:120',
-                'apellido' => 'required|max:120',
-                'dni' => 'required|numeric',
-                'direccion' => 'required',
-                'email' => 'nullable|max:120',
-                'telefono' => 'nullable|numeric',
-                'fecha_nacimiento' => 'date_format:Y-m-d',
-                'fecha_ingreso' => 'date_format:Y-m-d',
-                'cargo' => 'required|max:100',
-                'sueldo' => 'required|numeric',
-            ]);
+        $data = $request->validated();
         $empleado = Empleado::create($data);
         return redirect()->route('empleado.index');
     }
@@ -72,7 +73,7 @@ class EmpleadoController extends Controller
      */
     public function edit(Empleado $empleado)
     {
-        //
+        return view('empleado.edit', compact('empleado'));
     }
 
     /**
@@ -82,9 +83,11 @@ class EmpleadoController extends Controller
      * @param  \App\Models\Empleado  $empleado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Empleado $empleado)
+    public function update(EmpleadoRequest $request, Empleado $empleado)
     {
-        //
+        $data = $request->validated();
+        $empleado->update($data);
+        return redirect()->route('empleado.index');
     }
 
     /**

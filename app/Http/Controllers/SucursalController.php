@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SucursalRequest;
 use App\Models\Sucursal;
 use Illuminate\Http\Request;
 
@@ -66,7 +67,7 @@ class SucursalController extends Controller
      */
     public function edit(Sucursal $sucursal)
     {
-        //
+        return view('sucursal.edit', compact('sucursal'));
     }
 
     /**
@@ -76,9 +77,11 @@ class SucursalController extends Controller
      * @param  \App\Models\Sucursal  $sucursal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sucursal $sucursal)
+    public function update(SucursalRequest $request, Sucursal $sucursal)
     {
-        //
+        $data = $request->validated();
+        $sucursal->update($data);
+        return redirect()->route('sucursal.index');
     }
 
     /**

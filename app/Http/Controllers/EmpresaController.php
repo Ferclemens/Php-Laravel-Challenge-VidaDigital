@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmpresaRequest;
 use App\Models\Empresa;
 use Illuminate\Http\Request;
 
@@ -67,7 +68,7 @@ class EmpresaController extends Controller
      */
     public function edit(Empresa $empresa)
     {
-        //
+        return view('empresa.edit', compact('empresa'));
     }
 
     /**
@@ -77,9 +78,11 @@ class EmpresaController extends Controller
      * @param  \App\Models\Empresa  $empresa
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Empresa $empresa)
+    public function update(EmpresaRequest $request, Empresa $empresa)
     {
-        //
+        $data = $request->validated();
+        $empresa->update($data);
+        return redirect()->route('empresa.index');
     }
 
     /**
