@@ -42,6 +42,7 @@
                         {{ $sucursal->telefono}}
                     </td>
                     <td>
+                        <a href="{{route('sucursal.show', $sucursal)}}">Ver</a>
                         <a href="{{route('sucursal.edit', $sucursal)}}">Editar</a>
                     </td>
                 </tr>

@@ -14,17 +14,17 @@
             <div class="col-sm-12">
                 @yield('header')
             </div>
-            <div class="col-sm-4">
-                @yield('empresa')
-            </div>
-            <div class="col-sm-4">
-                @yield('sucursal')
-            </div>
-            <div class="col-sm-4">
-                @yield('empleado')
-            </div>
             <div class="col-sm-12">
                 @yield('content')
+            </div>
+            <div class="col-sm-4 my-4">
+                @yield('empresa')
+            </div>
+            <div class="col-sm-4 my-4">
+                @yield('sucursal')
+            </div>
+            <div class="col-sm-4 my-4">
+                @yield('empleado')
             </div>
         </div>
     </div>

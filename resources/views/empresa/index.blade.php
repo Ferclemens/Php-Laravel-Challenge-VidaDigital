@@ -48,6 +48,7 @@
                         {{ $empresa->telefono}}
                     </td>
                     <td>
+                        <a href="{{route('empresa.show', $empresa)}}">Ver</a>
                         <a href="{{route('empresa.edit', $empresa)}}">Editar</a>
                     </td>
                 </tr>

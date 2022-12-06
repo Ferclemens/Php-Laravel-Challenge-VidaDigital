@@ -33,6 +33,10 @@ Route::get('empresa/listar',[EmpresaController::class,'index'])->name('empresa.i
 Route::get('sucursal/listar',[SucursalController::class,'index'])->name('sucursal.index');
 Route::get('empleado/listar',[EmpleadoController::class,'index'])->name('empleado.index');
 
+Route::get('empleado/{empleado}/ver', [EmpleadoController::class,'show'])->name('empleado.show');
+Route::get('empresa/{empresa}/ver', [EmpresaController::class,'show'])->name('empresa.show');
+Route::get('sucursal/{sucursal}/ver', [SucursalController::class,'show'])->name('sucursal.show');
+
 // ----UPDATE----
 Route::get('empleado/{empleado}/editar',[EmpleadoController::class,'edit'])->name('empleado.edit');
 Route::get('empresa/{empresa}/editar',[EmpresaController::class,'edit'])->name('empresa.edit');

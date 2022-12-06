@@ -78,6 +78,7 @@
                         {{ $empleado->sueldo}}
                     </td>
                     <td>
+                        <a href="{{route('empleado.show', $empleado)}}">Ver</a>
                         <a href="{{route('empleado.edit', $empleado)}}">Editar</a>
                     </td>
                 </tr>
