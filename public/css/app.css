@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;1,700&family=Lato:wght@400;700;900&family=Poppins:wght@300;400;500&family=Roboto:wght@100;300;500&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+:root {
+    --Background: #004643;
+    --Headline: #001e1d;
+    --Paragraph: #0f3433;
+    --Button: #f9bc60;
+    --ButtonText: #001e1d;
+    --Main: #e8e4e6;
+    --Highlight: #f9bc60;
+    --Secondary: #abd1c6;
+    --Tertiary: #e16162;
+}
+body {
+    min-height: 100vh;
+}
+.body__container {
+    background-color: var(--Background);
+}
+.landing__title {
+    background-color: var(--Main);
+    border-radius: 3px;
+}
+.landing__container {
+    background-color: var(--Main);
+    color: var(--Headline);
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.content__container {
+    display: flex;
+    flex-direction: column;
+}
+.form__empresa__container {
+    
+}

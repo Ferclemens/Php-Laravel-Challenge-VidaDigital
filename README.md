@@ -26,20 +26,20 @@
 
 ##  //-----Steps to Run the project with Git and Laravel-----//
 
-#### Open a terminal in the destination folder and clone the repository, using the commands:
+## Open a terminal in the destination folder and clone the repository, using the commands:
 
 ##### git init
 ##### git clone https://github.com/Ferclemens/Php-Laravel-Challenge-VidaDigital.git
 
-#### Enter the project folder:
+## Enter the project folder:
 
 ##### cd Php-Laravel-Challenge-VidaDigital
 
-#### Install dependencies:
+## Install dependencies:
 
 ##### composer install
 
-#### Once the installation is finished, create and configure a data base:
+## Once the installation is finished, create and configure a data base:
 
 ##### Create DB with MySQL Workbench (ej: php-mysql)
 ##### In Visual Studio, go to .env.example file and configure Connection to db:
@@ -54,18 +54,18 @@
 ##### ....
 ##### Done, rename file to .env only.
 
-#### Create APP_KEY and make migrations:
+## Create APP_KEY and make migrations:
 ##### In Terminal, create a unique app key. Enter:
 ##### php artisan key:generate
 
 ##### Make migrations with command:
 ##### php artisan migrate
 
-#### RUN!
+## RUN!
 ##### Run server in local, enter:
 ##### php artisan serve
 
 ##### If everyting ok, show a message like:
 ##### Server running on [http://localhost:3306].
 
-#### Done!, ✨Happy Coding!✨
+## Done!, ✨Happy Coding!✨

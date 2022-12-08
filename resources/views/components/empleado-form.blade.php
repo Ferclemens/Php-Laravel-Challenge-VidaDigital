@@ -1,18 +1,18 @@
 @csrf
-<div class="row my-2">
-    <div class="col-sm-12">
+<div class="row my-3">
+    <div class="col-sm-6">
         <label for="InputNombre" class="form-label">Nombre</label>
         <input type="text" name='nombre' id='InputNombre' class="form-control" placeholder="Ingrese nombre" value="{{ old('nombre', $empleado->nombre)}}">
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <label for="InputApellido" class="form-label">Apellido</label>
         <input type="text" name='apellido' id='InputApellido' class="form-control" placeholder="Ingrese apellido" value="{{ old('apellido', $empleado->apellido)}}">
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <label for="InputDireccion" class="form-label">Dirección</label>
         <input type="text" name='direccion' id='InputDireccion' class="form-control" placeholder="Ingrese dirección" value="{{ old('direccion', $empleado->direccion)}}">
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <label for="InputEmail" class="form-label">E-mail</label>
         <input type="text" name='email' id='InputEmail' class="form-control" placeholder="Ingrese e-mail" value="{{ old('email', $empleado->email)}}">
     </div>
@@ -48,7 +48,7 @@
         <label for="InputSueldo" class="form-label">Sueldo</label>
         <input type="number" name='sueldo' id='InputSueldo' class="form-control" placeholder="Ingrese Sueldo" value="{{ old('sueldo', $empleado->sueldo)}}">
     </div>
-    <div class="col-sm-12 text-center my-2">
+    <div class="col-sm-12 text-center mt-3">
         <button type="submit" class="btn px-5 btn-primary">Guardar</button>
     </div>
 </div>
