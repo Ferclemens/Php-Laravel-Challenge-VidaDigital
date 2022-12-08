@@ -28,8 +28,8 @@
 
 #### Open a terminal in the destination folder and clone the repository, using the commands:
 
-git init
-git clone https://github.com/Ferclemens/Php-Laravel-Challenge-VidaDigital.git
+##### git init
+##### git clone https://github.com/Ferclemens/Php-Laravel-Challenge-VidaDigital.git
 
 #### Enter the project folder:
 
