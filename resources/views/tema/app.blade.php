@@ -12,23 +12,25 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <div class="row min-vh-100 m-0 pt-4 align-items-center justify-content-center body__container">
+    <div class="row min-vh-100 m-0 pt-4 pb-4 align-items-center justify-content-center body__container">
         <div class="col-sm-10">
             <div class="landing__container">
                 <div class="col-sm-12">
                     @yield('header')
                 </div>
-                <div class="col-sm-12 content__container">
+                <div class="content__container">
                     @yield('content')
                 </div>
-                <div class="col-sm-4 my-5">
-                    @yield('empresa')
-                </div>
-                <div class="col-sm-4 my-5">
-                    @yield('sucursal')
-                </div>
-                <div class="col-sm-4 my-5">
-                    @yield('empleado')
+                <div class="row">
+                    <div class="col-sm-4 m-auto">
+                        @yield('empresa')
+                    </div>
+                    <div class="col-sm-4 m-auto">
+                        @yield('sucursal')
+                    </div>
+                    <div class="col-sm-4 m-auto">
+                        @yield('empleado')
+                    </div>
                 </div>
             </div>
         </div>
