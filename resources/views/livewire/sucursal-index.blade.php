@@ -54,4 +54,5 @@
             @endforeach
         </tbody>
     </table>
+    {{$sucursales->links()}}
 </div>
