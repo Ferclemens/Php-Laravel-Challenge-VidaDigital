@@ -33,39 +33,39 @@
 
 #### Enter the project folder:
 
-cd Php-Laravel-Challenge-VidaDigital
+##### cd Php-Laravel-Challenge-VidaDigital
 
 #### Install dependencies:
 
-composer install
+##### composer install
 
 #### Once the installation is finished, create and configure a data base:
 
-Create DB with MySQL Workbench (ej: php-mysql)
-In Visual Studio, go to .env.example file and configure Connection to db:
-(example)
-..... 
-DB_CONNECTION=mysql
-DB_HOST=localhost
-DB_PORT=3306
-DB_DATABASE=php-mysql
-DB_USERNAME=root
-DB_PASSWORD=secret
-....
-Done, rename file to .env only.
+##### Create DB with MySQL Workbench (ej: php-mysql)
+##### In Visual Studio, go to .env.example file and configure Connection to db:
+##### (example)
+##### ..... 
+##### DB_CONNECTION=mysql
+##### DB_HOST=localhost
+##### DB_PORT=3306
+##### DB_DATABASE=php-mysql
+##### DB_USERNAME=root
+##### DB_PASSWORD=secret
+##### ....
+##### Done, rename file to .env only.
 
 #### Create APP_KEY and make migrations:
-In Terminal, create a unique app key. Enter:
-php artisan key:generate
+##### In Terminal, create a unique app key. Enter:
+##### php artisan key:generate
 
-Make migrations with command:
-php artisan migrate
+##### Make migrations with command:
+##### php artisan migrate
 
 #### RUN!
-Run server in local, enter:
-php artisan serve
+##### Run server in local, enter:
+##### php artisan serve
 
-If everyting ok, show a message like:
-Server running on [http://localhost:3306].
+##### If everyting ok, show a message like:
+##### Server running on [http://localhost:3306].
 
 #### Done!, ✨Happy Coding!✨
