@@ -48,7 +48,22 @@ class EmpleadoController extends Controller
      */
     public function store(EmpleadoRequest $request)
     {
-        $data = $request->validated();
+        $data = $request->validate(
+            [
+                'nombre' => 'required|max:120',
+                'apellido' => 'required|max:120',
+                'direccion' => 'required',
+                'email' => 'nullable|max:120',
+                'dni' => 'required',
+                'telefono' => 'nullable|numeric',
+                'fecha_nacimiento' => 'required',
+                'fecha_ingreso' => 'required',
+                'cargo' => 'required|max:120',
+                'sueldo' => 'required',
+                'id_sucursal' => 'required',
+            ]
+        );
+        //dd($data);
         $empleado = Empleado::create($data);
         return redirect()->route('empleado.index');
     }

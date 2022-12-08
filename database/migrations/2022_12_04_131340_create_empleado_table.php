@@ -16,6 +16,11 @@ return new class extends Migration
         Schema::create('empleado', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            //Foreign Key sucursal
+            $table->unsignedBigInteger('id_sucursal')->nullable();
+            $table->foreign('id_sucursal')
+                ->references('id')->on('sucursal')
+                ->onDelete('set null');
             $table->string('nombre', 120);
             $table->string('apellido', 120);
             $table->bigInteger('dni');

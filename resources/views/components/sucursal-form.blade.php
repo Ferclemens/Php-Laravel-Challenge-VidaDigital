@@ -12,9 +12,17 @@
         <label for="InputEmail" class="form-label">E-mail</label>
         <input type="text" name='email' id='InputEmail' class="form-control" placeholder="Ingrese e-mail" value="{{ old('email', $sucursal->email)}}">
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <label for="InputTelefono" class="form-label">Teléfono</label>
         <input type="number" name='telefono' id='InputTelefono' class="form-control" placeholder="Ingrese teléfono" value="{{ old('telefono', $sucursal->telefono)}}">
+    </div>
+    <div class="col-sm-6">
+        <label for="SelectEmpresa" class="form-label">Empresa</label>
+        <select name='id_empresa' id='SelectEmpresa' class="form-select">
+            @foreach ($empresas as $empresa)
+                <option value="{{$empresa->id}}" {{old('id_empresa',$sucursal->id_empresa) == $empresa->id ? 'selected' : ''}}>{{$empresa->nombre}}</option>
+            @endforeach
+        </select>
     </div>
     <div class="col-sm-12 text-center my-2">
         <button type="submit" class="btn px-5 btn-primary">Guardar</button>

@@ -24,13 +24,21 @@
         <label for="InputTelefono" class="form-label">Teléfono</label>
         <input type="number" name='telefono' id='InputTelefono' class="form-control" placeholder="Ingrese teléfono" value="{{ old('telefono', $empleado->telefono)}}">
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
         <label for="InputFechaNacimiento" class="form-label">Fecha de nacimiento</label>
         <input type="date" name="fecha_nacimiento" id="InputFechaNacimiento" class="form-control" value="{{ old('fecha_nacimiento', $empleado->fecha_nacimiento)}}">
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
         <label for="InputFechaIngreso" class="form-label">Fecha de ingreso</label>
         <input type="date" name="fecha_ingreso" id="InputFechaIngreso" class="form-control" value="{{ old('fecha_ingreso', $empleado->fecha_ingreso)}}">
+    </div>
+    <div class="col-sm-4">
+        <label for="SelectSucursal" class="form-label">Sucursal</label>
+        <select name='id_sucursal' id='SelectSucursal' class="form-select">
+            @foreach ($sucursales as $sucursal)
+                <option value="{{$sucursal->id}}" {{old('id_sucursal', $empleado->id_sucursal) == $sucursal->id ? 'selected' : ''}}>{{$sucursal->nombre}}</option>
+            @endforeach
+        </select>
     </div>
     <div class="col-sm-6">
         <label for="InputCargo" class="form-label">Cargo</label>

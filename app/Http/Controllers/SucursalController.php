@@ -42,9 +42,25 @@ class SucursalController extends Controller
                 'direccion' => 'required',
                 'email' => 'nullable|max:120',
                 'telefono' => 'nullable|numeric',
+                'id_empresa' => 'required',
             ]);
         $sucursal = Sucursal::create($data);
         return redirect()->route('sucursal.index');
+
+        /*  $nombre = $request->input('nombre');
+            $direccion = $request->input('direccion');
+            $email = $request->input('email');
+            $telefono = $request->input('telefono');
+            $id_empresa = $request->input('id_empresa');
+
+            $sucursal = new Sucursal;
+            $sucursal->nombre = $nombre;
+            $sucursal->direccion = $direccion;
+            $sucursal->email = $email;
+            $sucursal->telefono = $telefono;
+            $sucursal->id_empresa = $id_empresa;
+            $sucursal->save();
+            return redirect()->route('sucursal.index'); */
     }
 
     /**

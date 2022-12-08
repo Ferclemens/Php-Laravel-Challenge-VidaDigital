@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use App\Models\Sucursal;
+use App\Models\Empresa;
 use Illuminate\View\Component;
 
 class SucursalForm extends Component
@@ -30,10 +31,13 @@ class SucursalForm extends Component
      */
     public function render()
     {
+        $empresas = Empresa::all();
         $params = 
         [
             'sucursal' => $this->sucursal,
+            'empresas' => $empresas,
         ];
+        //dd($params);
         return view('components.sucursal-form', $params);
     }
 }
