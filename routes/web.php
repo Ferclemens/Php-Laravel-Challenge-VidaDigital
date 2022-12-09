@@ -1,5 +1,7 @@
 <?php
-
+use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\SucursalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,35 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// ----CREATE----
+Route::get('empresa/registrar',[EmpresaController::class,'create'])->name('empresa.create');
+Route::get('sucursal/registrar',[SucursalController::class,'create'])->name('sucursal.create');
+Route::get('empleado/registrar',[EmpleadoController::class,'create'])->name('empleado.create');
+
+Route::post('empresa/guardar',[EmpresaController::class,'store'])->name('empresa.store');
+Route::post('sucursal/guardar',[SucursalController::class,'store'])->name('sucursal.store');
+Route::post('empleado/guardar',[EmpleadoController::class,'store'])->name('empleado.store');
+
+// ----READ----
+Route::get('empresa/listar',[EmpresaController::class,'index'])->name('empresa.index');
+Route::get('sucursal/listar',[SucursalController::class,'index'])->name('sucursal.index');
+Route::get('empleado/listar',[EmpleadoController::class,'index'])->name('empleado.index');
+
+Route::get('empleado/{empleado}/ver', [EmpleadoController::class,'show'])->name('empleado.show');
+Route::get('empresa/{empresa}/ver', [EmpresaController::class,'show'])->name('empresa.show');
+Route::get('sucursal/{sucursal}/ver', [SucursalController::class,'show'])->name('sucursal.show');
+
+// ----UPDATE----
+Route::get('empleado/{empleado}/editar',[EmpleadoController::class,'edit'])->name('empleado.edit');
+Route::get('empresa/{empresa}/editar',[EmpresaController::class,'edit'])->name('empresa.edit');
+Route::get('sucursal/{sucursal}/editar',[SucursalController::class,'edit'])->name('sucursal.edit');
+
+Route::put('empleado/{empleado}/actualizar',[EmpleadoController::class,'update'])->name('empleado.update');
+Route::put('empresa/{empresa}/actualizar',[EmpresaController::class,'update'])->name('empresa.update');
+Route::put('sucursal/{sucursal}/actualizar',[SucursalController::class,'update'])->name('sucursal.update');
+
+// ----DELETE----
+Route::delete('empleado/{empleado}/eliminar',[EmpleadoController::class,'destroy'])->name('empleado.destroy');
+Route::delete('empresa/{empresa}/eliminar',[EmpresaController::class,'destroy'])->name('empresa.destroy');
+Route::delete('sucursal/{sucursal}/eliminar',[SucursalController::class,'destroy'])->name('sucursal.destroy');
