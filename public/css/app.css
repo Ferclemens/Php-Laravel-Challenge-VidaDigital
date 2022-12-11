@@ -3,10 +3,10 @@
     --Background: #004643;
     --Headline: #001e1d;
     --Paragraph: #0f3433;
-    --Button: #f9bc60;
+    --Button: #f1ae49;
     --ButtonText: #001e1d;
     --Main: #e8e4e6;
-    --Highlight: #f9bc60;
+    --Highlight: #d4992c;
     --Secondary: #abd1c6;
     --Tertiary: #e16162;
 }
@@ -15,13 +15,20 @@ body {
     min-height: 100vh;
 }
 .body__container {
-    background-color: var(--Background);
+    background: rgb(184,124,38);
+    background: linear-gradient(31deg, rgba(184,124,38,1) 17%, rgba(173,74,35,1) 37%, rgba(145,75,61,1) 54%, rgba(97,111,94,1) 70%, rgba(31,156,171,1) 87%);  
+}
+.back__register {
+    background-color: var(--Paragraph);
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .landing__title {
     background-color: var(--Main);   
 }
 .landing__container {
-    background-color: var(--Main);
+    background-color: var(--Secondary);
     color: var(--Headline);
     font-family: 'Ubuntu', sans-serif;
     border-radius: 3px;
@@ -29,14 +36,19 @@ body {
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-
+}
+.button__general {
+    background-color: var(--Button);
+    border-radius: 3px;
+    margin: 2px;
+}
+.button__general:hover {
+    background-color: var(--Highlight);
 }
 /*--------------Ventanas de contenido general----------------*/
 .content__container {
     display: flex;
     flex-direction: column;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 /*--------------Index - lista de elementos----------------*/

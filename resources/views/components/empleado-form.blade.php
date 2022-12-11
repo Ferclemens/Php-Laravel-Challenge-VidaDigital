@@ -49,6 +49,7 @@
         <input type="number" name='sueldo' id='InputSueldo' class="form-control" placeholder="Ingrese Sueldo" value="{{ old('sueldo', $empleado->sueldo)}}">
     </div>
     <div class="col-sm-12 text-center mt-3">
-        <button type="submit" class="btn px-5 btn-primary">Guardar</button>
+        <button type="submit" class="btn px-5 button__general">Guardar</button>
+        <a href="{{ route('welcome')}}" class="btn button__general">Volver</a>
     </div>
 </div>

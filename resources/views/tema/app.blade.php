@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="row min-vh-100 m-0 p-5 align-items-center justify-content-center body__container">
-        <div class="col-sm-12">
+        <div class="col-sm-12 back__register">
             <div class="landing__container">
                 <div class="col-sm-12">
                     @yield('header')

@@ -6,42 +6,43 @@
     <h3 class="my-3">
         Detalle empleado ID: <i>{{$empleado->id}}</i>
     </h3>
-    <div class="row">
+    <div class="row gap-3">
         <div class="col-sm-12">
-            Nombre: {{$empleado->nombre}}    
+            <strong>Nombre:</strong> {{$empleado->nombre}}    
         </div>
         <div class="col-sm-12">
-            Apellido: {{$empleado->apellido}}    
+            <strong>Apellido:</strong> {{$empleado->apellido}}    
         </div>
         <div class="col-sm-12">
-            DNI: {{$empleado->dni}}    
+            <strong>DNI:</strong> {{$empleado->dni}}    
         </div>
         <div class="col-sm-12">
-            Dirección: {{$empleado->direccion}}    
+            <strong>Dirección:</strong> {{$empleado->direccion}}    
         </div>
         <div class="col-sm-12">
-            Email: {{$empleado->email}}    
+            <strong>Email:</strong> {{$empleado->email}}    
         </div>
         <div class="col-sm-12">
-            Teléfono: {{$empleado->telefono}}    
+            <strong>Teléfono:</strong> {{$empleado->telefono}}    
         </div>
         <div class="col-sm-12">
-            Fecha de nacimiento: {{$empleado->fecha_nacimiento}}    
+            <strong>Fecha de nacimiento:</strong> {{$empleado->fecha_nacimiento}}    
         </div>
         <div class="col-sm-12">
-            Fecha de ingreso: {{$empleado->fecha_ingreso}}    
+            <strong>Fecha de ingreso:</strong> {{$empleado->fecha_ingreso}}    
         </div>
         <div class="col-sm-12">
-            Cargo: {{$empleado->cargo}}    
+            <strong>Cargo:</strong> {{$empleado->cargo}}    
         </div>
         <div class="col-sm-12">
-            Sueldo: {{$empleado->sueldo}}    
+            <strong>Sueldo:</strong> {{$empleado->sueldo}}    
         </div>
         <div class="col-sm-12">
             <form action="{{ route('empleado.destroy', $empleado)}}" method="POST">
                 @csrf
                 @method('delete')
-                <button class="btn btn-danger btn-sm">Eliminar</button>
+                <button class="btn button__general">Eliminar</button>
+                <a href="{{ route('empleado.index')}}" class="btn button__general">Volver</a>
             </form>    
         </div>
     </div>

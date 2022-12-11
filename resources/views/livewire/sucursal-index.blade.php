@@ -60,6 +60,7 @@
             </tbody>
         </table>
         {{$sucursales->links()}}
+        <a href="{{ route('welcome')}}" class="btn button__general">Volver</a>
     </div>
 </div>
 

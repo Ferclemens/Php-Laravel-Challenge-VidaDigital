@@ -6,24 +6,25 @@
     <h3 class="my-3">
         Detalle sucursal ID: <i>{{$sucursal->id}}</i>
     </h3>
-    <div class="row">
+    <div class="row gap-3">
         <div class="col-sm-12">
-            Nombre: {{$sucursal->nombre}}    
+            <strong>Nombre:</strong> {{$sucursal->nombre}}    
         </div>
         <div class="col-sm-12">
-            Dirección: {{$sucursal->direccion}}    
+            <strong>Dirección:</strong> {{$sucursal->direccion}}    
         </div>
         <div class="col-sm-12">
-            Email: {{$sucursal->email}}    
+            <strong>Email:</strong> {{$sucursal->email}}    
         </div>
         <div class="col-sm-12">
-            Teléfono: {{$sucursal->telefono}}    
+            <strong>Teléfono:</strong> {{$sucursal->telefono}}    
         </div>
         <div class="col-sm-12">
             <form action="{{ route('sucursal.destroy', $sucursal)}}" method="POST">
                 @csrf
                 @method('delete')
-                <button class="btn btn-danger btn-sm">Eliminar</button>
+                <button class="btn button__general">Eliminar</button>
+                <a href="{{ route('sucursal.index')}}" class="btn button__general">Volver</a>
             </form>    
         </div>
     </div>

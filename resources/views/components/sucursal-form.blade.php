@@ -26,6 +26,7 @@
         </select>
     </div>
     <div class="col-sm-12 text-center mt-4">
-        <button type="submit" class="btn px-5 btn-primary">Guardar</button>
+        <button type="submit" class="btn px-5 button__general">Guardar</button>
+        <a href="{{ route('welcome')}}" class="btn button__general">Volver</a>
     </div>
 </div>
