@@ -18,25 +18,27 @@ body {
     background-color: var(--Background);
 }
 .landing__title {
-    background-color: var(--Main);
-    border-radius: 3px;
-    
+    background-color: var(--Main);   
 }
 .landing__container {
     background-color: var(--Main);
     color: var(--Headline);
     font-family: 'Ubuntu', sans-serif;
     border-radius: 3px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
 }
 /*--------------Ventanas de contenido general----------------*/
 .content__container {
     display: flex;
     flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
+
 /*--------------Index - lista de elementos----------------*/
 .index__container {    
     display: flex;
@@ -64,19 +66,18 @@ body {
 }
 .index__actions {
     display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-items:flex-end;
     justify-content: center;
     align-items: center;
     gap: 2px;
     
 }
-
-.index__btn {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
+.icon__options {
+    height: 25px;
+    width: auto;
+}
+.button__options {
+    border: none;
+    background-color: transparent;
 }
 

@@ -22,13 +22,13 @@
                     @yield('content')
                 </div>
                 <div class="row">
-                    <div class="col-sm-4 m-auto">
+                    <div class="col-sm-4 ">
                         @yield('empresa')
                     </div>
-                    <div class="col-sm-4 m-auto">
+                    <div class="col-sm-4 ">
                         @yield('sucursal')
                     </div>
-                    <div class="col-sm-4 m-auto">
+                    <div class="col-sm-4 ">
                         @yield('empleado')
                     </div>
                 </div>

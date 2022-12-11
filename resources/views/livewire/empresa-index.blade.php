@@ -4,7 +4,7 @@
     </div>
     <div class="table-responsive">
         <table class="table table-stripped table-hover">
-            <thead>
+            <thead class="text-center">
                 <tr>
                     <th>
                         Nombre
@@ -46,15 +46,13 @@
                         </td>
                         <td>
                             <div class="index__actions">
-                                <a href="{{route('empresa.show', $empresa)}}" class="btn btn-danger btn-sm index__btn">Ver</a>
-                                <a href="{{route('empresa.edit', $empresa)}}" class="btn btn-danger btn-sm index__btn">Editar</a>
-                                <div class="col-sm-12">
-                                    <form action="{{ route('empresa.destroy', $empresa)}}" method="POST" class="index__actions">
-                                        @csrf
-                                        @method('delete')
-                                        <button class="btn btn-danger btn-sm index__btn">Eliminar</button>
-                                    </form>    
-                                </div>
+                                <a href="{{route('empresa.show', $empresa)}}" ><img src="https://cdn-icons-png.flaticon.com/512/2703/2703438.png" class="mx-2 icon__options"/></a>
+                                <a href="{{route('empresa.edit', $empresa)}}" ><img src="https://cdn-icons-png.flaticon.com/512/738/738880.png" class="mx-2 icon__options"/></a>
+                                <form action="{{ route('empresa.destroy', $empresa)}}" method="POST" class="index__actions">
+                                    @csrf
+                                    @method('delete')
+                                    <button class="button__options"><img src="https://cdn-icons-png.flaticon.com/512/9163/9163905.png" class="mx-2 icon__options"/></button>
+                                </form>    
                             </div>
                         </td>
                     </tr>

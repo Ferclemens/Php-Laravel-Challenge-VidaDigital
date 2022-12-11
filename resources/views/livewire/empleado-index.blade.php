@@ -3,9 +3,9 @@
         <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="Buscar" wire:model="busqueda">
         </div>
-        <div class="table-responsive align-bottom">
+        <div class="table-responsive">
             <table class="table table-stripped table-hover">
-                <thead>
+                <thead class="text-center">
                     <tr>
                         <th>
                             Nombre
@@ -83,15 +83,13 @@
                             </td>
                             <td>
                                 <div class="index__actions">
-                                    <a href="{{route('empleado.show', $empleado)}}" class="btn btn-danger btn-sm index__btn">Ver</a>
-                                    <a href="{{route('empleado.edit', $empleado)}}" class="btn btn-danger btn-sm index__btn">Editar</a>
-                                    <div class="col-sm-12">
-                                        <form action="{{ route('empleado.destroy', $empleado)}}" method="POST" class="index__actions">
-                                            @csrf
-                                            @method('delete')
-                                            <button class="btn btn-danger btn-sm index__btn">Eliminar</button>
-                                        </form>    
-                                    </div>
+                                    <a href="{{route('empleado.show', $empleado)}}"><img src="https://cdn-icons-png.flaticon.com/512/2703/2703438.png" class="mx-2 icon__options"/></a>
+                                    <a href="{{route('empleado.edit', $empleado)}}"><img src="https://cdn-icons-png.flaticon.com/512/738/738880.png" class="mx-2 icon__options"/></a>
+                                    <form action="{{ route('empleado.destroy', $empleado)}}" method="POST" class="index__actions">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="button__options"><img src="https://cdn-icons-png.flaticon.com/512/9163/9163905.png" class="mx-2 icon__options"/></button>
+                                    </form>    
                                 </div>
                             </td>
                         </tr>

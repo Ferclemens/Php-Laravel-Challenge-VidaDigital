@@ -1,9 +1,10 @@
 @csrf
 <div class="row my-4">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <label for="InputNombre" class="form-label">Nombre de la empresa</label>
         <input type="text" name='nombre' id='InputNombre' class="form-control" placeholder="Ingrese nombre" value="{{ old('nombre', $empresa->nombre)}}">
     </div>
+    <div class="col-sm-6"></div>
     <div class="col-sm-6">
         <label for="InputCuit" class="form-label">CUIT</label>
         <input type="number" name='cuit' id='InputCuit' class="form-control" placeholder="Ingrese CUIT" value="{{ old('cuit', $empresa->cuit)}}">

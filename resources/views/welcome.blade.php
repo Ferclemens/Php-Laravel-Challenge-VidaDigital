@@ -3,7 +3,7 @@
 @section('title','Inicio')
 
 @section('header')
-    <h1 class="text-center pt-4">
+    <h1 class="text-center py-5">
         PHP-MySQL CRUD
     </h1>
 @endsection
@@ -30,7 +30,7 @@
 @endsection
 
 @section('content')
-    <h3 class="text-center my-5">
+    <h3 class="text-center pb-5">
         Bienvenido!
     </h3>
 @endsection
