@@ -20,6 +20,7 @@ body {
 .landing__title {
     background-color: var(--Main);
     border-radius: 3px;
+    
 }
 .landing__container {
     background-color: var(--Main);
@@ -28,8 +29,10 @@ body {
     border-radius: 3px;
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 10px;
+
 }
-/*--------------Ventanas de contenido----------------*/
+/*--------------Ventanas de contenido general----------------*/
 .content__container {
     display: flex;
     flex-direction: column;
@@ -66,20 +69,14 @@ body {
     flex-wrap: wrap;
     align-items:flex-end;
     justify-content: center;
+    align-items: center;
     gap: 2px;
     
 }
+
 .index__btn {
-    display: flex;
-    justify-content: center;
-    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
 }
 
-@media (max-width: 780px) {
-    .index__container {
-        justify-content: center;
-    }
-    .index__actions {
-        flex-direction: row;
-    }
-}

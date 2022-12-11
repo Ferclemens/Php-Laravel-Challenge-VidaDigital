@@ -12,8 +12,8 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <div class="row min-vh-100 m-0 pt-4 pb-4 align-items-center justify-content-center body__container">
-        <div class="col-sm-10">
+    <div class="row min-vh-100 m-0 p-5 align-items-center justify-content-center body__container">
+        <div class="col-sm-12">
             <div class="landing__container">
                 <div class="col-sm-12">
                     @yield('header')
