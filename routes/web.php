@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 // ----CREATE----
 Route::get('empresa/registrar',[EmpresaController::class,'create'])->name('empresa.create');

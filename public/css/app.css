@@ -3,37 +3,75 @@
     --Background: #004643;
     --Headline: #001e1d;
     --Paragraph: #0f3433;
-    --Button: #f9bc60;
+    --Button: #f1ae49;
     --ButtonText: #001e1d;
     --Main: #e8e4e6;
-    --Highlight: #f9bc60;
+    --Highlight: #d4992c;
     --Secondary: #abd1c6;
     --Tertiary: #e16162;
+    --HighlightDelete: #d32c2c;
 }
 /*--------------Landing----------------*/
 body {
     min-height: 100vh;
 }
 .body__container {
-    background-color: var(--Background);
+    background: rgb(184,124,38);
+    background: linear-gradient(31deg, rgba(184,124,38,1) 17%, rgba(173,74,35,1) 37%, rgba(145,75,61,1) 54%, rgba(97,111,94,1) 70%, rgba(31,156,171,1) 87%);  
+}
+.back__register {
+    background-color: var(--Paragraph);
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .landing__title {
-    background-color: var(--Main);
-    border-radius: 3px;
+    background-color: var(--Main);   
 }
 .landing__container {
-    background-color: var(--Main);
+    background-color: var(--Secondary);
     color: var(--Headline);
     font-family: 'Ubuntu', sans-serif;
     border-radius: 3px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-/*--------------Ventanas de contenido----------------*/
+.button__general {
+    background-color: var(--Button);
+    border-radius: 3px;
+    margin: 2px;
+}
+.button__general:hover {
+    background-color: var(--Highlight);
+}
+.button__delete {
+    background-color: var(--Tertiary);
+}
+.button__delete:hover {
+    background-color: var(--HighlightDelete);
+}
+.contact__container {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-top: 15px;
+}
+.link__icon {
+  height: 40px;
+  width: auto;
+  transition: 0.5s;  
+}
+.link__icon:hover {
+    transform: scale(1.3);
+}
+/*--------------Ventanas de contenido general----------------*/
 .content__container {
     display: flex;
     flex-direction: column;
 }
+
 /*--------------Index - lista de elementos----------------*/
 .index__container {    
     display: flex;
@@ -61,25 +99,18 @@ body {
 }
 .index__actions {
     display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-items:flex-end;
     justify-content: center;
+    align-items: center;
     gap: 2px;
     
 }
-.index__btn {
-    display: flex;
-    justify-content: center;
-    width: 150px;
+.icon__options {
+    height: 25px;
+    width: auto;
+}
+.button__options {
+    border: none;
+    background-color: transparent;
 }
 
-@media (max-width: 780px) {
-    .index__container {
-        justify-content: center;
-    }
-    .index__actions {
-        flex-direction: row;
-    }
-}

@@ -3,7 +3,7 @@
 @section('title','Create Sucursal')
 
 @section('content')
-    <h3  class="my-3">
+    <h3  class="mb-4">
         Registrar Sucursal
     </h3>
     <form action="{{ route('sucursal.store') }}" method="POST">

@@ -3,7 +3,7 @@
 @section('title','Create Empresa')
 
 @section('content')
-    <h3  class="my-3">
+    <h3  class="mb-4">
         Registrar Empresa
     </h3>
     <form class="form__empresa__container" action="{{ route('empresa.store') }}" method="POST">

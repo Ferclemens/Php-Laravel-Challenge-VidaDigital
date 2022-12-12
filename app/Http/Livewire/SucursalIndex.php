@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Sucursal;
+use App\Models\Empresa;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -23,6 +24,7 @@ class SucursalIndex extends Component
     
     public function render()
     {
+        $empresas = Empresa::all();
         $sucursales = $this->consulta();
         $sucursales = $sucursales->paginate($this->paginacion);
         if($sucursales->currentPage() > $sucursales->lastPage())
@@ -33,6 +35,7 @@ class SucursalIndex extends Component
         }
         $params = [
             'sucursales' => $sucursales,
+            'empresas' => $empresas,
         ];
         return view('livewire.sucursal-index', $params);
     }
