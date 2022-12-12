@@ -16,6 +16,7 @@
 
 ## Work organization: 
 #### - Trello | https://trello.com/b/fMbjXM4E/php-mysql-crud-vida-digital
+#### - MER diagram | https://trello.com/c/JgXvH34u/25-diagrama-mer
 
 ## //-----Getting Started with Laravel-----//
 
