@@ -43,19 +43,19 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel">Info de Contacto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-content modal__content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="contactModalLabel">Info de Contacto</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Email: foclemens@gmail.com</p>
+                            <p>Teléfono: 3624 685267</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn button__general" data-bs-dismiss="modal">Anotado!</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                    <p>Email: foclemens@gmail.com</p>
-                    <p>Teléfono: 3624 685267</p>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn button__general" data-bs-dismiss="modal">Anotado!</button>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
