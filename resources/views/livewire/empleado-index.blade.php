@@ -5,7 +5,7 @@
         </div>
         <div class="table-responsive">
             <table class="table table-stripped table-hover">
-                <thead class="text-center">
+                <thead>
                     <tr>
                         <th>
                             Nombre
