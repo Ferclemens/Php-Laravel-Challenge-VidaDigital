@@ -84,27 +84,7 @@
                             <td>
                                 <div class="index__actions">
                                     <a href="{{route('empleado.show', $empleado)}}"><img src="https://cdn-icons-png.flaticon.com/512/2703/2703438.png" class="mx-2 icon__options"/></a>
-                                    <a href="{{route('empleado.edit', $empleado)}}"><img src="https://cdn-icons-png.flaticon.com/512/738/738880.png" class="mx-2 icon__options"/></a>
-                                    <form action="{{ route('empleado.destroy', $empleado)}}" method="POST" class="index__actions">
-                                        @csrf
-                                        @method('delete')
-                                        <button class="button__options" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="https://cdn-icons-png.flaticon.com/512/9163/9163905.png" class="mx-2 icon__options"/></button>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">¿Eliminar registro?</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn button__general" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit" class="btn btn-danger">Eliminar</button>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>    
+                                    <a href="{{route('empleado.edit', $empleado)}}"><img src="https://cdn-icons-png.flaticon.com/512/738/738880.png" class="mx-2 icon__options"/></a>  
                                 </div>
                             </td>
                         </tr>

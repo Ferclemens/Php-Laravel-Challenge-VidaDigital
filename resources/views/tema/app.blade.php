@@ -34,6 +34,31 @@
                 </div>
             </div>
         </div>
+        <div class="col-sm-12 contact__container">
+            <button type="button" class="button__options" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="https://cdn-icons-png.flaticon.com/512/2343/2343694.png" alt="info contact" class="link__icon"></button>
+            <a href="https://github.com/Ferclemens" target="_blank" rel="noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/3291/3291695.png" alt="GitHub link" class="link__icon"></a>
+            <a href="https://www.linkedin.com/in/foclemens/" target="_blank" rel="noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn link" class="link__icon"></a>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Info de Contacto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <p>Email: foclemens@gmail.com</p>
+                <p>Teléfono: 3624 685267</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn button__general" data-bs-dismiss="modal">Anotado!</button>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
     @livewireScripts
 </body>
