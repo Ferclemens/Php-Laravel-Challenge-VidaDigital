@@ -47,7 +47,7 @@
 ##### (example)
 ##### ..... 
 ##### DB_CONNECTION=mysql
-##### DB_HOST=localhost
+##### DB_HOST=127.0.0.1
 ##### DB_PORT=3306
 ##### DB_DATABASE=php-mysql
 ##### DB_USERNAME=root
@@ -67,6 +67,6 @@
 ##### php artisan serve
 
 ##### If everyting ok, show a message like:
-##### Server running on [http://localhost:3306].
+##### Server running on [http://127.0.0.1:8000].
 
 ## Done!, ✨Happy Coding!✨
